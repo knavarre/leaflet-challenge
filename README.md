@@ -13,6 +13,10 @@ The following steps are followed to create the desired visualization:
 2. Using Leaflet, create a map that plots the earthquakes based on longitude and latitude. 
    - The size of the marker reflects the earthquake magnitude. Higher magnitude earthquaks appear larger in size. 
    - The color of the marker reflects the earthquake depth. This is denoted using a color range from red to blue. Earthquakes with a greater depth being denoted in red and earthquakes with a smaller depth being denoted in blue. 
+   - Include popup information for each earquake.  When the marker is clicked display the following information: 
+     - Earthquake location
+     - Magnitude
+     - Depth
 3. Create a legend
 
 ## Resulting Visualization
