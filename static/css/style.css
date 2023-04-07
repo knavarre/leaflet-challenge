@@ -8,3 +8,34 @@ body,
 html {
   height: 100%;
 }
+
+.legend {
+  font: 15px Arial, Helvetica, sans-serif;
+  color: black;
+  background: whitesmoke;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  list-style-type: none;
+  border: 1px solid #999;
+
+}
+
+.legend ul span{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  color: black;
+  margin-left: -10px;
+  margin-right: 10px;
+
+}
+
+.legend ul span.label{
+  width: 75px;
+
+}
+
+.legend p {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}

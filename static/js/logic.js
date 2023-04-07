@@ -91,5 +91,38 @@ function createMap(earthquakes) {
     collapsed: false
   }).addTo(myMap);
 
+    // create color array for legend 
+  colorArray = ['darkred', 'orangered', 'orange', 'green', 'blue', 'darkmagenta']
+
+  //create legend
+  var legend = L.control({position: 'bottomright'});
+
+  //function to define legend elements
+  legend.onAdd = function(map) {
+    var div = L.DomUtil.create('div', 'legend');
+    colorRanges = ['>90m', '70m-90m', '50m-70m', '30m-50m', '10m-30m', '<10m'];
+    var labels = []
+
+    //legend title
+    var legend_info = "<p>Eathquake Depth: </p>";
+    div.innerHTML = legend_info;
+
+    //legend info
+    colorRanges.forEach(function(limit, index) {
+      labels.push(`<ul><span style = background-color:${colorArray[index]};></span>
+      <span class =\"label\">${colorRanges[index]}</span></ul>`);
+    });
+
+    //create div HTML
+    div.innerHTML += labels.join("");
+
+    //return div
+    return div;
+
+  };
+
+  //add legend to map 
+  legend.addTo(myMap);
+
 };
 
